@@ -1,3 +1,6 @@
+//Used convention for output = [ PID , AT , BT , PT , CT , TAT , WT]
+//Used convention for input = [ PID , AT , BT , PT ]
+
 let input = [
   [1, 0, 8, 3],
   [2, 1, 2, 4],
