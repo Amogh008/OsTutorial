@@ -4,7 +4,7 @@ let totalPages = refStr.length;
 let faults = 0;
 let hits = 0;
 let frame = [];
-let finalArray = [];
+
 for (let i = 0; i < totalPages; i++) {
   if (frame.indexOf(refStr[i]) === -1) {
     faults++;
