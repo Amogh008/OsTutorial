@@ -1,6 +1,3 @@
-//Used convention for output = [ PID , AT , BT , PT , CT , TAT , WT]
-//Used convention for input = [ PID , AT , BT , PT ]
-
 let input = [
   [1, 0, 8, 3],
   [2, 1, 2, 4],
@@ -63,6 +60,6 @@ avgCT = avgCT / completeArray.length;
 
 console.log(completeArray);
 
-console.log("Average Completion Time : " + avgCT);
-console.log("Average Turn Around Time : " + avgTAT);
-console.log("Average Waiting Time : " + avgWT);
+console.log("Average Completion Time : " + avgCT.toFixed(2) + "ms");
+console.log("Average Turn Around Time : " + avgTAT.toFixed(2) + "ms");
+console.log("Average Waiting Time : " + avgWT.toFixed(2) + "ms");
