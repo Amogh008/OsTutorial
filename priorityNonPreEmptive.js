@@ -57,9 +57,15 @@ for (let i = 0; i < completeArray.length; i++) {
 avgTAT = avgTAT / completeArray.length;
 avgWT = avgWT / completeArray.length;
 avgCT = avgCT / completeArray.length;
+console.log("---------------------------------------");
 
-console.log(completeArray);
+console.log("PID|  AT |  BT |  PT |  CT | TAT |  WT");
+console.log("---------------------------------------");
+completeArray.map((ele) => {
+  console.log(ele.join("  |  "));
+  console.log("    ");
+});
 
-console.log("Average Completion Time : " + avgCT.toFixed(2) + "ms");
-console.log("Average Turn Around Time : " + avgTAT.toFixed(2) + "ms");
-console.log("Average Waiting Time : " + avgWT.toFixed(2) + "ms");
+console.log("Average Completion Time : " + avgCT.toFixed(3) + "ms");
+console.log("Average Turn Around Time : " + avgTAT.toFixed(3) + "ms");
+console.log("Average Waiting Time : " + avgWT.toFixed(3) + "ms");

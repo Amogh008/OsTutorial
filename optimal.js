@@ -10,7 +10,8 @@ for (let i = 0; i < totalPages; i++) {
     faults++;
     if (frame.length < number) {
       frame.push(refStr[i]);
-      console.log(frame);
+      console.log("   ");
+      console.log("[ " + frame.join(" , ") + "]  *");
     } else {
       let farArray = [];
       for (let j = 0; j < number; j++) {
@@ -21,7 +22,8 @@ for (let i = 0; i < totalPages; i++) {
         let max = Math.max(...farArray);
         let index = farArray.indexOf(max);
         frame[index] = refStr[i];
-        console.log(frame);
+        console.log("   ");
+        console.log("[ " + frame.join(" , ") + "]  *");
       } else {
         let minusCount = 0;
         let minusIndex = [];
@@ -33,7 +35,8 @@ for (let i = 0; i < totalPages; i++) {
         }
         if (minusCount === 1) {
           frame[minusIndex[0]] = refStr[i];
-          console.log(frame);
+          console.log("   ");
+          console.log(console.log("[ " + frame.join(" , ") + "]  *"));
         } else {
           let prevStr = refStr.slice(0, i);
 
@@ -46,17 +49,21 @@ for (let i = 0; i < totalPages; i++) {
             }
           }
           frame[replaceIndex] = refStr[i];
-          console.log(frame);
+          console.log("   ");
+          console.log("[ " + frame.join(" , ") + "]  *");
         }
       }
     }
   } else {
     hits++;
-    console.log(frame);
+    console.log("   ");
+    console.log("[ " + frame.join(" , ") + "]  <---");
   }
 }
-
+console.log("   ");
 let faultRatio = (faults / (faults + hits)) * 100;
+
 let hitRatio = (hits / (faults + hits)) * 100;
 console.log("Fault percentage : " + faultRatio.toFixed(2) + " %");
+console.log("   ");
 console.log("hit percentage : " + hitRatio.toFixed(2) + " %");
